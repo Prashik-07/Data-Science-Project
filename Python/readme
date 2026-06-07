@@ -1,1 +1,18 @@
+Wind turbines break down unexpectedly, causing costly downtime and rushed repairs. 
+This project builds a machine learning system that reads turbine sensor data — temperature, vibration, rotor speed, and more — and predicts failures before they happen. 
+It also identifies the specific fault type (Gearbox, Blades, or Generator) so maintenance teams know exactly what to fix.
+The pipeline covers the full data science workflow: data cleaning, exploratory analysis, feature engineering, model training, and evaluation. 
+Five models were compared — Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and XGBoost. 
+SMOTE was applied to the training set to handle class imbalance, since failures make up only 12.8% of the data.
 
+XGBoost delivered the strongest results:
+
+AUC-ROC: 1.00
+Recall (Failure class): 1.00
+F1-Score (Failure class): 0.99
+Precision (Failure class): 0.99
+5-Fold Cross-Validation AUC: 1.00 ± 0.00
+Fault Type Classification Accuracy: 1.00 across all three categories (Gearbox, Blades, Generator)
+
+SHAP explainability was applied to make every prediction transparent.
+Instead of a black-box alert, the system shows which sensor readings drove the prediction — making it practical for engineers in the field, not just data scientists.
