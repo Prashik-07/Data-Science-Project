@@ -1,1 +1,24 @@
+This is the cleaned dataset used in the Turbine Health Monitoring & Failure Forecasting project.
+The goal of this project is to predict wind turbine failures before they happen using machine learning.
 
+About the File : 
+File name: Data_Science_Cleaned.csv
+Total rows: 9,000
+Total columns: 17
+Missing values: None (sensor columns are fully clean)
+
+
+Out of 9,000 records:
+  Label     Count    Percentage 
+No Failure  7,848      87.2%
+Failure     1,152      12.8%
+
+Among the 1,152 failures, the fault types are:
+
+Fault Type  Count
+Gearbox     586
+Blades      314
+Generator   252
+
+Only 12.8% of records are failures. This is realistic — turbines don't fail often.
+But it means a model that always predicts "No Failure" would be 87% accurate and completely wrong for the job.
